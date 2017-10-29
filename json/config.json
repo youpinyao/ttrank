@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "result": {
+    "types": ["day", "week", "month", "total"],
+    "dataInterval": 6000,
+    "tabInterval": 6000
+  }
+}

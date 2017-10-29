@@ -1,0 +1,7 @@
+<div class="tabs clearfix">
+  {{each types}}
+  <div class="tab {{currentTab === $value ? 'active': ''}}"
+    data-type="{{$value}}"
+    onclick="selectType('{{$value}}')"></div>
+  {{/each}}
+</div>

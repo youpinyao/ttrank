@@ -1,0 +1,226 @@
+@charset "utf-8";
+@import "animate";
+@import "reset";
+
+/* CSS Document */
+
+html {
+  font-size: 0.625em;
+}
+
+body {
+  background: #f8f8f8;
+  -webkit-transition: opacity 300ms ease;
+  font-family: Microsoft YaHei, Arial;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+
+/*提示， 弹窗*/
+
+.alert {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.alert .alert-text {
+  margin: 50px 30px 0px 30px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 1.6em;
+  color: #666666;
+}
+
+
+/*加载图片*/
+
+.page-load-mask {
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+  position: absolute;
+  z-index: 10000;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.page-load-mask-text {
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.page-load-mask-img {
+  display: inline-block;
+  background: url(../images/load.gif) no-repeat center center;
+  width: 31px;
+  height: 31px;
+}
+
+.page-load-mask {
+  background: #be0008;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.page-load-mask.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.music {
+  -webkit-animation: rotate360 1.5s linear infinite;
+  animation: rotate360 1.5s linear infinite;
+  z-index: 9999;
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  background: url(../images/music.png) no-repeat 0px 0px;
+  background-size: cover;
+}
+
+.music.disabled {
+  -webkit-animation: none;
+  animation: none;
+  background-position: 0px -32px;
+}
+
+.arrow {
+  -webkit-animation: toUp 2s ease infinite;
+  animation: toUp 2s ease infinite;
+  z-index: 9999;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 10px;
+  margin: 0 auto;
+  width: 27px;
+  height: 15px;
+  background: url(../images/icons.png) no-repeat 0px -54px;
+  background-size: cover;
+}
+
+.company-mask {
+  background: #00a0e9;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+  position: absolute;
+  z-index: 10000;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.company-mask .c {
+  -webkit-perspective: 800;
+  perspective: 800;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 175px;
+  height: 90px;
+  text-align: center;
+  color: #ffffff;
+  line-height: 20px;
+  font-size: 1.6em;
+}
+
+.company-mask .c .t {
+  -webkit-animation: rotateY360 5s linear infinite;
+  animation: rotateY360 5s linear infinite;
+  width: 175px;
+  height: 70px;
+  background: url(../images/leborn-logo.png) no-repeat top center;
+  background-size: contain;
+}
+
+.company-mask.hide {
+  -webkit-transform: scale(3);
+  transform: scale(3);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slide {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  -webkit-perspective: 800;
+  perspective: 800;
+  -webkit-transform: scale(1.005);
+  transform: scale(1.005);
+}
+
+.slide .slide-item {
+  min-height: 415px;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.slide .slide-item.active {
+  display: block;
+}
+
+.slide .slide-item .img-item {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.slide .slide-item * {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.slide .slide-item img.img-item {
+  width: 100%;
+  height: auto;
+}
+
+.slide .slide-item.scroll img.img-item {
+  position: relative;
+}
+
+.slide .slide-item.scroll>div {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.slide .slide-item.s1 .img-item:nth-child(1) {
+  opacity: 1;
+  background-size: cover;
+}

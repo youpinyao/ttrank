@@ -1,0 +1,6 @@
+dist/
+.dll/
+tools/
+node_modules/
+lib/
+../wxapi/

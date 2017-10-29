@@ -5,7 +5,7 @@ const commonConfig = require('./base.config.js');
 module.exports = function () {
   return webpackMerge(commonConfig(), {
     entry: {
-      vendor: './js/vendor.js'
+      vendor: './js/vendor.js',
     },
     plugins: [
       new webpack.LoaderOptionsPlugin({

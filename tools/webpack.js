@@ -65,7 +65,7 @@ function runDev() {
 
   // compiler.outputFileSystem = fs;
 
-  compiler.run(runCallback);
+  // compiler.run(runCallback);
 
   compiler.plugin('invalid', function () {
     clearConsole();

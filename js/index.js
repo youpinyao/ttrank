@@ -64,17 +64,23 @@ function updateConfig() {
       }, tabInterval);
     }
 
-    // 倒计时更新数据
-    setTimeout(() => {
-      updateConfig().done(updateRank);
-    }, dataInterval);
-
     configData.types = types;
     configData.dataInterval = dataInterval;
     configData.tabInterval = tabInterval;
 
+    stUpdate();
+
     updateView();
+  }, () => {
+    stUpdate();
   });
+}
+
+function stUpdate() {
+  // 倒计时更新数据
+  setTimeout(() => {
+    updateConfig().done(updateRank);
+  }, configData.tabInterval || 5000);
 }
 
 function updateView() {
